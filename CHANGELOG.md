@@ -262,7 +262,7 @@ All notable changes to the 143IT website will be documented in this file.
 - **Build Performance**:
   - Production build time: ~14 seconds
   - Docker image size: ~150MB (down from potential 1GB+ without optimization)
-  - All 15 pages statically pre-rendered
+  - Then-current 15-page site statically pre-rendered
   - Bundle size: 87.2 kB shared JS, 42.9 kB home page
 
 ### Fixed
@@ -294,7 +294,7 @@ Route (app)                                  Size     First Load JS
 **Deployment Tested:**
 - ✅ Local Docker Desktop (macOS)
 - ✅ Production build successful
-- ✅ All 15 pages accessible
+- ✅ Then-current 15-page site accessible
 - ✅ HTTP endpoint responsive
 - ✅ No console errors
 

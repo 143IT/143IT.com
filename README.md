@@ -15,11 +15,12 @@ Modern, responsive website for **143IT** — a Managed Service Provider speciali
   - 3D card hover effects and floating icons
 - **AI Chatbot Widget**: OpenAI-powered assistant with rate limiting and security features
 - **Azure VM Manager Product Surface**: Product page, guided workflow preview, demo-request funnel, Security & Trust page, and Product Support page
+- **Launch QA Artifacts**: Product analytics event plan, asset sanitization checklist, launch QA matrix, and internal-link checker
 - **Responsive Design**: Mobile-first, fully responsive across all devices
 - **Advanced SEO**: 
   - Open Graph and Twitter Card metadata
   - Canonical URLs on all pages
-  - Structured data (JSON-LD) for Organization, WebSite, BlogPosting, and Service
+  - Structured data (JSON-LD) for Organization, WebSite, BlogPosting, Service, and SoftwareApplication
   - Comprehensive meta tags and semantic HTML
 - **Blog Features**:
   - Real-time search functionality
@@ -37,7 +38,7 @@ Modern, responsive website for **143IT** — a Managed Service Provider speciali
   - Input sanitization and validation (Zod)
   - Secure image remote patterns
 - **Dark Theme**: Premium tech aesthetic with glassmorphism and neon accents
-- **Animations**: Typing effects, scroll animations, animated counters, fade-in sections, 3D hovers
+- **Animations**: Scroll animations, product workflow interactions, fade-in sections, and 3D hovers
 - **Performance**: Optimized images, lazy loading, minimal JavaScript
 - **Accessibility**: WCAG 2.1 compliant with proper ARIA labels
 

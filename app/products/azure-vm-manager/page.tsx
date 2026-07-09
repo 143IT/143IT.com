@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import DemoRequestForm from "@/components/DemoRequestForm";
 import ProductWorkflowDemo from "@/components/ProductWorkflowDemo";
+import StructuredData from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   title: "Azure VM Manager — Controlled Azure VM Operations | 143IT",
@@ -27,6 +28,22 @@ export const metadata: Metadata = {
       "Controlled, visible, and auditable Azure VM operations—built from real infrastructure experience.",
     type: "website",
     url: "https://143it.com/products/azure-vm-manager",
+    siteName: "143IT",
+    images: [
+      {
+        url: "https://143it.com/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "Azure VM Manager by 143IT",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Azure VM Manager | 143IT",
+    description:
+      "Controlled, visible, and auditable Azure VM operations—built from real infrastructure experience.",
+    images: ["https://143it.com/og-image.svg"],
   },
 };
 
@@ -61,6 +78,25 @@ const fit = [
 export default function AzureVmManagerPage() {
   return (
     <div className="pt-24">
+      <StructuredData
+        type="SoftwareApplication"
+        data={{
+          name: "Azure VM Manager",
+          description:
+            "Azure VM Manager helps infrastructure teams and MSPs request, track, and audit recurring Azure virtual machine operations.",
+          url: "https://143it.com/products/azure-vm-manager",
+          featureList: [
+            "Azure VM operation request workflow",
+            "Guided operational status tracking",
+            "Audit-oriented request history",
+            "Assisted demo and trial onboarding",
+          ],
+          audience: {
+            "@type": "Audience",
+            audienceType: "Infrastructure teams and managed service providers",
+          },
+        }}
+      />
       <section className="relative overflow-hidden py-24 px-6">
         <div className="absolute inset-0 bg-gradient-to-b from-accent-1/10 via-accent-cyan/5 to-transparent" />
         <div className="absolute inset-0 grid-background opacity-40" />

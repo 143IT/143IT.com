@@ -58,7 +58,7 @@ export default function BlogArticleLayout({
       name: "143IT",
       logo: {
         "@type": "ImageObject",
-        url: `${baseUrl}/logo.png`,
+        url: `${baseUrl}/logo.svg`,
       },
     },
     mainEntityOfPage: {

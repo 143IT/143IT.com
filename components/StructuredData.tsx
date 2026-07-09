@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 interface StructuredDataProps {
-  type?: "Organization" | "WebSite" | "Service" | "BlogPosting";
+  type?: "Organization" | "WebSite" | "Service" | "BlogPosting" | "SoftwareApplication";
   data?: Record<string, any>;
 }
 
@@ -13,11 +13,10 @@ export default function StructuredData({ type = "Organization", data }: Structur
     "@type": "Organization",
     name: "143IT",
     url: baseUrl,
-    logo: `${baseUrl}/logo.png`, // Update with actual logo URL
+    logo: `${baseUrl}/logo.svg`,
     description: "Next-Gen IT Management with Cloud, Automation, and AI at the Core.",
     contactPoint: {
       "@type": "ContactPoint",
-      telephone: "+1-720-292-6098",
       contactType: "Customer Service",
       email: "support@143it.com",
       areaServed: ["US", "CA"],
@@ -58,7 +57,7 @@ export default function StructuredData({ type = "Organization", data }: Structur
           name: "143IT",
           logo: {
             "@type": "ImageObject",
-            url: `${baseUrl}/logo.png`,
+            url: `${baseUrl}/logo.svg`,
           },
         },
         ...data,
@@ -77,6 +76,20 @@ export default function StructuredData({ type = "Organization", data }: Structur
         ...data,
       };
       break;
+    case "SoftwareApplication":
+      structuredData = {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        publisher: {
+          "@type": "Organization",
+          name: "143IT",
+          url: baseUrl,
+        },
+        applicationCategory: "BusinessApplication",
+        operatingSystem: "Web",
+        ...data,
+      };
+      break;
     default:
       structuredData = data || baseOrganization;
   }
@@ -88,4 +101,3 @@ export default function StructuredData({ type = "Organization", data }: Structur
     />
   );
 }
-

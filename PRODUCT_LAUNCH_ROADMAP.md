@@ -205,7 +205,7 @@ A cautious buyer can identify who operates the product, understand required Azur
 ## 7. Phase 3 — Launch and Measurement
 
 1. Select an analytics provider and consent model.
-2. Track:
+2. Use the provider-neutral event plan in `PRODUCT_ANALYTICS_EVENT_PLAN.md` to track:
    - Product-page views
    - Demo engagement
    - Pricing-section views
@@ -215,8 +215,8 @@ A cautious buyer can identify who operates the product, understand required Azur
    - Validation and submission failures
    - Assisted-trial starts
 3. Publish the honest Azure VM Manager build story.
-4. Add product metadata, social previews, structured data, sitemap entries, and redirects.
-5. Complete responsive, browser, accessibility, privacy, security, and performance QA.
+4. Product metadata, social previews, SoftwareApplication structured data, and sitemap entries have been added for product routes. External metadata/social-preview validation remains open.
+5. Use `LAUNCH_QA_MATRIX.md` and `npm run check:links` for responsive, browser, accessibility, privacy, security, and performance QA.
 6. Verify n8n delivery, notifications, confirmation, and failure handling.
 
 ### Exit criteria

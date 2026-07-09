@@ -8,7 +8,7 @@ const baseUrl = "https://143it.com";
 export function getOgImageUrl(title?: string): string {
   // For now, return a default OG image URL
   // In production, you would generate dynamic OG images or use a static one
-  return `${baseUrl}/og-image.png`;
+  return `${baseUrl}/og-image.svg`;
 }
 
 /**
@@ -80,4 +80,3 @@ export function generateMetadata({
 
   return metadata;
 }
-

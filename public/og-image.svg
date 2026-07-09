@@ -1,0 +1,12 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1200" height="630" fill="#050816"/>
+  <circle cx="1020" cy="100" r="260" fill="#00D4FF" fill-opacity="0.18"/>
+  <circle cx="160" cy="560" r="240" fill="#7C3AED" fill-opacity="0.2"/>
+  <path d="M0 120H1200M0 240H1200M0 360H1200M0 480H1200M120 0V630M240 0V630M360 0V630M480 0V630M600 0V630M720 0V630M840 0V630M960 0V630M1080 0V630" stroke="white" stroke-opacity="0.06"/>
+  <text x="90" y="185" fill="#F8FAFC" font-family="Arial, sans-serif" font-size="82" font-weight="700">143IT</text>
+  <text x="90" y="295" fill="#00D4FF" font-family="Arial, sans-serif" font-size="60" font-weight="700">Azure VM Manager</text>
+  <text x="90" y="380" fill="#CBD5E1" font-family="Arial, sans-serif" font-size="34">Controlled Azure VM operations with clear accountability</text>
+  <text x="90" y="465" fill="#94A3B8" font-family="Arial, sans-serif" font-size="28">Built by an MSP for infrastructure teams</text>
+  <rect x="88" y="505" width="318" height="58" rx="18" fill="#00D4FF" fill-opacity="0.14" stroke="#00D4FF" stroke-opacity="0.5"/>
+  <text x="120" y="543" fill="#E0F2FE" font-family="Arial, sans-serif" font-size="24" font-weight="700">143it.com</text>
+</svg>

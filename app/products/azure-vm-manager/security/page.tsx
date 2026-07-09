@@ -19,6 +19,29 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/products/azure-vm-manager/security",
   },
+  openGraph: {
+    title: "Azure VM Manager Security & Trust | 143IT",
+    description:
+      "Review the planned security model, Azure access boundaries, data handling, and trust controls for Azure VM Manager.",
+    type: "website",
+    url: "https://143it.com/products/azure-vm-manager/security",
+    siteName: "143IT",
+    images: [
+      {
+        url: "https://143it.com/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "Azure VM Manager Security & Trust",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Azure VM Manager Security & Trust | 143IT",
+    description:
+      "Review the planned security model, Azure access boundaries, data handling, and trust controls for Azure VM Manager.",
+    images: ["https://143it.com/og-image.svg"],
+  },
 };
 
 const securityTopics = [

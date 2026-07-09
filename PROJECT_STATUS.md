@@ -43,6 +43,10 @@
 - [x] Security & Trust draft page (`/products/azure-vm-manager/security`)
 - [x] Product Support draft page (`/products/azure-vm-manager/support`)
 - [x] Privacy and terms updated with factual product demo/trial disclosures
+- [x] Product SEO metadata and SoftwareApplication structured data
+- [x] Provider-neutral analytics event plan
+- [x] Launch QA matrix and internal-link check script
+- [x] Product asset sanitization checklist
 - [ ] Real sanitized Fluent UI screenshots
 - [ ] Production n8n end-to-end validation
 - [ ] Formal support/SLA and legal approval
@@ -82,7 +86,7 @@
   - [x] Open Graph metadata on all pages
   - [x] Twitter Card metadata
   - [x] Canonical URLs
-  - [x] Structured data (JSON-LD) for Organization, WebSite, BlogPosting, Service
+  - [x] Structured data (JSON-LD) for Organization, WebSite, BlogPosting, Service, and SoftwareApplication
   - [x] Comprehensive meta tags
 - [x] Custom MDX components
 - [x] Rehype plugins (slug, highlight, autolink)
@@ -292,6 +296,7 @@ npm run dev          # Start dev server (http://localhost:3000)
 npm run build        # Build for production
 npm start            # Run production build
 npm run lint         # Check code quality
+npm run check:links  # Check static internal links
 
 # Docker
 npm run docker:build              # Build Docker image
@@ -403,10 +408,10 @@ npm run docker:compose:logs       # View Compose logs
   - Automated test script (docker-test.sh)
   - Comprehensive deployment documentation
   - Production build verified (~150MB image)
-  - All 15 pages tested and working
+  - Historical release tested the then-current 15-page site
 
 - **v1.0.0** (March 2024) - Initial release
-  - 15 pages complete
+  - Initial 15-page site complete
   - MDX blog system
   - Framer Motion animations
   - 5 service detail pages

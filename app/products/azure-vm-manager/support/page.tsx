@@ -15,6 +15,29 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/products/azure-vm-manager/support",
   },
+  openGraph: {
+    title: "Azure VM Manager Support | 143IT",
+    description:
+      "Review the launch support model and open SLA decisions for Azure VM Manager.",
+    type: "website",
+    url: "https://143it.com/products/azure-vm-manager/support",
+    siteName: "143IT",
+    images: [
+      {
+        url: "https://143it.com/og-image.svg",
+        width: 1200,
+        height: 630,
+        alt: "Azure VM Manager Support",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Azure VM Manager Support | 143IT",
+    description:
+      "Review the launch support model and open SLA decisions for Azure VM Manager.",
+    images: ["https://143it.com/og-image.svg"],
+  },
 };
 
 const supportFacts = [

@@ -213,6 +213,7 @@ These decisions should be resolved first because they affect multiple implementa
 
 ### P1-05 — Refresh all product assets
 
+- [x] Created `PRODUCT_ASSET_SANITIZATION_CHECKLIST.md` for screenshot capture, redaction, alt text, naming, and approval.
 - [ ] Inventory screenshots in the Azure VM Manager repository, README files, documentation, and existing marketing assets.
 - [ ] Capture current Fluent UI screens at consistent dimensions.
 - [ ] Remove secrets, tenant identifiers, subscriptions, emails, and customer data.
@@ -221,7 +222,7 @@ These decisions should be resolved first because they affect multiple implementa
 - **Closes:** F-13
 - **Owner:** Product + Design
 - **Acceptance criteria:** Every public product image is current, safe, legible, and optimized.
-- **Verification:** Product-owner approval and sensitive-data review.
+- **Evidence:** Asset sanitization checklist added July 9, 2026; product-owner approval and sensitive-data review remain required for actual screenshots.
 
 ## Phase 2 — Trust, Legal, and Support
 
@@ -286,14 +287,14 @@ These decisions should be resolved first because they affect multiple implementa
 ### P3-01 — Instrument analytics and funnel events
 
 - [ ] Implement privacy-compatible analytics and consent behavior.
-- [ ] Define stable events for product-page views, demo engagement, pricing views, CTA clicks, form starts, successful submissions, trial starts, purchases, and errors.
-- [ ] Prevent sensitive form or Azure data from entering analytics.
+- [x] Define stable events for product-page views, demo engagement, pricing views, CTA clicks, form starts, successful submissions, trial starts, purchases, and errors.
+- [x] Prevent sensitive form or Azure data from entering analytics through a provider-neutral property allowlist.
 - [ ] Build a dashboard showing conversion and drop-off.
 - **Closes:** F-14
 - **Blocked by:** D-02, D-06
 - **Owner:** Web + Product
 - **Acceptance criteria:** The team can measure the complete approved funnel.
-- **Verification:** Events observed in the production analytics debugger and dashboard.
+- **Evidence:** `PRODUCT_ANALYTICS_EVENT_PLAN.md` added July 9, 2026. Provider selection, implementation, consent behavior, and dashboard remain blocked by D-06.
 
 ### P3-02 — Publish the honest Azure VM Manager build story
 
@@ -309,24 +310,26 @@ These decisions should be resolved first because they affect multiple implementa
 
 ### P3-03 — Complete product SEO and sharing metadata
 
-- [ ] Add unique title, description, canonical URL, Open Graph, and social-card metadata.
-- [ ] Add appropriate Product/SoftwareApplication structured data without unsupported ratings or offers.
-- [ ] Update sitemap, robots directives, and redirects.
+- [x] Add unique title, description, canonical URL, Open Graph, and social-card metadata for product, security, and support pages.
+- [x] Add appropriate Product/SoftwareApplication structured data without unsupported ratings or offers.
+- [x] Update sitemap for product, security, and support routes.
+- [ ] Validate rendered metadata and structured data with external preview/validator tools.
 - **Closes:** F-07
 - **Owner:** Web + Content
 - **Acceptance criteria:** Product pages are crawlable and share with correct content.
-- **Verification:** Build output, metadata inspection, structured-data validation, and social preview check.
+- **Evidence:** Product SEO metadata, SoftwareApplication schema, and real social/logo SVG assets added July 9, 2026; `npm run build` completed successfully. External structured-data and social preview validation remain open.
 
 ### P3-04 — Complete launch QA
 
-- [ ] Define numeric budgets for Core Web Vitals, JavaScript, images, and demo media.
+- [x] Define numeric budgets for Core Web Vitals, JavaScript, images, and demo media.
+- [x] Add repeatable internal-link check script.
 - [ ] Test supported desktop and mobile browsers.
 - [ ] Test keyboard navigation, focus, headings, labels, contrast, reduced motion, and screen-reader basics.
 - [ ] Test forms under success, validation, network failure, rate-limit, and duplicate-submission conditions.
 - [ ] Confirm no secrets or customer data appear in source, logs, screenshots, or analytics.
 - **Owner:** Web + Design + Product
 - **Acceptance criteria:** No launch-blocking functional, accessibility, privacy, or performance defects remain.
-- **Verification:** Attach the QA matrix, accessibility results, performance report, and defect disposition.
+- **Evidence:** `LAUNCH_QA_MATRIX.md` and `npm run check:links` added July 9, 2026; link check passed across 25 internal routes/assets. Browser, accessibility, form, privacy, and performance execution evidence remains open.
 
 ### P3-05 — Add waitlist/newsletter capture
 

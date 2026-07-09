@@ -21,6 +21,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
+    "check:links": "node scripts/check-internal-links.mjs",
     "docker:build": "docker build -t 143it-website:latest .",
     "docker:run": "docker run -d --name 143it-web -p 3000:3000 143it-website:latest",
     "docker:stop": "docker stop 143it-web && docker rm 143it-web",
