@@ -1,8 +1,8 @@
 # 143IT Website - Project Status
 
-**Last Updated:** January 2025
+**Last Updated:** July 9, 2026
 **Version:** 1.3.0
-**Status:** ✅ Production Ready with SEO Enhancements & Blog Search
+**Status:** Product launch remediation in progress — Phase 0 and Phase 1 implemented; Phase 2 trust/support/legal draft content added with approval gates
 
 ## Brand Identity
 
@@ -28,12 +28,24 @@
 - [x] Services overview
 - [x] Blog listing
 - [x] About page
-- [x] Contact page with form (⚠️ pending n8n integration)
-- [x] Case Studies page (`/case-studies`)
+- [x] Contact page with form
+- [x] Build Story page (`/case-studies`)
 - [x] Resources page (`/resources`)
 - [x] Privacy Policy page (`/legal/privacy`)
 - [x] Terms of Service page (`/legal/terms`)
 - [x] Pricing page (`/pricing`)
+
+### ✅ Azure VM Manager Product Launch Surface
+- [x] Product overview (`/products/azure-vm-manager`)
+- [x] Guided workflow preview with clearly labeled demo data
+- [x] Dedicated product demo-request form and `/api/product-demo`
+- [x] n8n product-demo webhook support with `N8N_PRODUCT_DEMO_WEBHOOK`
+- [x] Security & Trust draft page (`/products/azure-vm-manager/security`)
+- [x] Product Support draft page (`/products/azure-vm-manager/support`)
+- [x] Privacy and terms updated with factual product demo/trial disclosures
+- [ ] Real sanitized Fluent UI screenshots
+- [ ] Production n8n end-to-end validation
+- [ ] Formal support/SLA and legal approval
 
 ### ✅ Service Detail Pages (5 pages)
 - [x] Managed IT (`/services/managed-it`)
@@ -56,8 +68,7 @@
 
 ### ✅ Animations & Interactivity
 - [x] Framer Motion integration
-- [x] Typing effect on hero tagline
-- [x] Animated stat counters
+- [x] Product workflow demo
 - [x] Scroll-triggered fade-in animations
 - [x] Hover effects on cards
 - [x] Smooth transitions throughout
@@ -102,36 +113,51 @@
 
 ## Page Count & Routes
 
-**Total Pages:** 18
+**Total Generated Routes:** 32 in the July 9, 2026 production build
 
-### Static Pages (16)
+### Static Pages
 1. `/` - Home
 2. `/services` - Services overview
 3. `/blog` - Blog listing
 4. `/about` - About
 5. `/contact` - Contact
 6. `/pricing` - Pricing
-7. `/case-studies` - Case Studies
+7. `/case-studies` - Build Story
 8. `/resources` - Resources
 9. `/legal/privacy` - Privacy Policy
 10. `/legal/terms` - Terms of Service
-11. `/services/managed-it`
-12. `/services/cloud-modernization`
-13. `/services/automation-devops`
-14. `/services/ai-integration`
-15. `/services/security-compliance`
+11. `/products/azure-vm-manager`
+12. `/products/azure-vm-manager/security`
+13. `/products/azure-vm-manager/support`
+14. `/services/managed-it`
+15. `/services/cloud-modernization`
+16. `/services/automation-devops`
+17. `/services/ai-integration`
+18. `/services/security-compliance`
 
-### Blog Articles (2)
-16. `/blog/infrastructure-as-code-guide-2024`
-17. `/blog/self-healing-infrastructure`
+### Blog Articles
+19. `/blog/infrastructure-as-code-guide-2024`
+20. `/blog/self-healing-infrastructure`
+21. `/blog/terraform-vs-ansible`
+22. `/blog/chatgpt-n8n-workflows`
+23. `/blog/azure-misconfigurations`
+24. `/blog/cicd-security-best-practices`
+25. `/blog/m365-automation-graph-api`
+
+### Dynamic/API Routes and Generated Assets
+- `/api/chat`
+- `/api/contact`
+- `/api/newsletter`
+- `/api/product-demo`
+- `/sitemap.xml`
 
 ## Performance Metrics
 
-- **Build Time:** ~14 seconds (Docker production build)
+- **Build Time:** ~7–12 seconds locally for `npm run build`
 - **Docker Image Size:** ~150MB (optimized)
 - **First Load JS:** 87.2 kB (shared)
-- **Home Page:** 42.9 kB (139 kB total)
-- **All Pages:** Statically pre-rendered
+- **Home Page:** 5.58 kB route size / 138 kB first load JS in latest build
+- **Static Pages:** Statically pre-rendered where applicable
 - **Bundle Size:** Optimized for production
 
 ## Docker Deployment
@@ -160,46 +186,49 @@ npm run docker:run
 ### Deployment Tested On
 - ✅ Local Docker Desktop (macOS)
 - ✅ Production build verified
-- ✅ All 18 pages accessible
+- ✅ Current production build generated 32 routes
 - ✅ HTTP endpoint responsive
 
 ## Contact Information
 
 - **Email:** support@143it.com
-- **Phone:** +1 (720) 292-6098
-- **Location:** Remote-First, Serving USA and CA
+- **Phone:** Not published at launch
+- **Location:** Remote, serving the United States and Canada
 - **GitHub:** https://github.com/iloveyouit
 - **LinkedIn:** https://www.linkedin.com/in/rob-loftin-143it
 
 ## ⚠️ Known Issues & Pending Features
 
-### Critical (Must Fix Before Production)
-1. **Contact Form NOT Functional**
-   - **Location**: `app/contact/page.tsx:21-35`
-   - **Issue**: Form submission is mocked with setTimeout, not actually sending data
-   - **Status**: TODO comment indicates n8n webhook integration pending
-   - **Impact**: Users see success message but data goes nowhere
-   - **Action Required**: Implement actual webhook POST to n8n
+### Critical / Launch Blocking
+1. **Production n8n validation**
+   - **Location**: `app/api/product-demo/route.ts`, contact/newsletter APIs
+   - **Issue**: Real production webhook delivery, durable storage, notification routing, and failure handling still need end-to-end evidence
+   - **Action Required**: Test with approved production n8n workflows
 
-2. **OpenAI API Key Security**
+2. **Product security/support/legal approvals**
+   - **Issue**: Security & Trust, Product Support, terms, and privacy pages include draft/factual disclosures but still require architecture, business, operational, and legal approval before launch commitments are final
+   - **Action Required**: Approve RBAC model, tenant isolation evidence, support/SLA policy, DPA/subprocessors, and final legal terms
+
+3. **OpenAI API Key Security**
    - **Location**: `.env.local`
    - **Recommendation**: Rotate API key before production deployment
    - **Add**: Rate limiting to `/api/chat` endpoint to prevent abuse
 
-3. **Image Remote Patterns Too Permissive**
+4. **Image Remote Patterns Too Permissive**
    - **Location**: `next.config.mjs:26`
    - **Issue**: Wildcard hostname (`**`) allows ALL external images
    - **Risk**: Potential SSRF vulnerability
    - **Fix**: Restrict to specific trusted domains
 
 ### Integration Points Ready for Setup
-1. **Newsletter** → n8n webhook (placeholder in `components/Newsletter.tsx:15`)
+1. **Newsletter** → n8n webhook
 2. **Analytics** → Add Fathom/Plausible tracking code
 3. **Blog CMS** → Connect to Notion API/Ghost/WordPress
 
 ### Placeholders to Replace
 - Author avatars (currently using default icons)
-- Case study metrics (placeholder data)
+- Real sanitized Azure VM Manager screenshots
+- Exact product support/SLA and pricing terms after approval
 
 ### Configuration Notes
 - **npm start warning**: Shows warning due to `output: 'standalone'` config, but works. Use `npm run dev` for development or Docker for production.
@@ -208,9 +237,10 @@ npm run docker:run
 ## File Organization
 
 ```
-📦 143IT.com (18 pages, 21 components, Docker ready)
-├── 📄 16 static pages
-├── 📄 2 MDX blog articles
+📦 143IT.com (32 generated routes, Docker ready)
+├── 📄 Core website pages
+├── 📄 Azure VM Manager product, security, and support pages
+├── 📄 7 MDX blog articles
 ├── 🎨 21 React components
 ├── 📋 Configuration files
 │   ├── next.config.mjs (ESM)
@@ -329,6 +359,13 @@ npm run docker:compose:logs       # View Compose logs
 
 ## Version History
 
+- **v1.3.1** (July 2026) - Azure VM Manager launch remediation
+  - Added Azure VM Manager product page and demo-request funnel
+  - Added Security & Trust and Product Support pages
+  - Replaced fabricated-looking case studies with a truthful build story
+  - Updated privacy and terms with factual product demo/trial disclosures
+  - Removed unsupported public claims and stale positioning
+
 - **v1.3.0** (January 2025) - SEO Enhancements & Blog Search
   - Added comprehensive SEO metadata utility
   - Implemented Open Graph and Twitter Card metadata
@@ -354,7 +391,7 @@ npm run docker:compose:logs       # View Compose logs
 - **v1.1.1** (January 2025) - Content and branding updates
   - Added Resources, Privacy Policy, and Terms of Service pages
   - Updated tagline to "Automate & Dominate with AI"
-  - Updated contact information (email, phone, location)
+  - Updated contact information
   - Added social media links (GitHub, LinkedIn)
   - Fixed broken footer links
   - Improved accessibility with ARIA labels
@@ -379,10 +416,11 @@ npm run docker:compose:logs       # View Compose logs
 
 ## Summary
 
-🎉 **Project Status: Production Ready with Docker Deployment**
+**Project Status: Product launch remediation in progress**
 
 The 143IT website is fully functional with:
-- 18 complete pages (all statically pre-rendered)
+- 32 generated routes in the latest production build
+- Azure VM Manager product, demo, security, and support pages
 - Professional animations with Framer Motion
 - Rich MDX blog with syntax highlighting
 - Comprehensive service pages
@@ -395,9 +433,9 @@ The 143IT website is fully functional with:
 - **Complete deployment documentation**
 
 **Docker Deployment Verified:**
-- ✅ Build time: ~14 seconds
+- ✅ Build time: ~7–12 seconds locally
 - ✅ Image size: ~150MB
-- ✅ All 18 pages accessible
+- ✅ 32 routes generated in latest production build
 - ✅ Production optimized
 - ✅ Security hardened (non-root user)
 

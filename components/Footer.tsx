@@ -62,6 +62,8 @@ export default function Footer() {
             <h3 className="font-heading font-bold text-text mb-6 text-lg">Services</h3>
             <ul className="space-y-3">
               <li><Link href="/products/azure-vm-manager" className="text-text/50 hover:text-accent-1 transition-colors text-sm">Azure VM Manager</Link></li>
+              <li><Link href="/products/azure-vm-manager/security" className="text-text/50 hover:text-accent-1 transition-colors text-sm">Product Security</Link></li>
+              <li><Link href="/products/azure-vm-manager/support" className="text-text/50 hover:text-accent-1 transition-colors text-sm">Product Support</Link></li>
               <li><Link href="/services/managed-it" className="text-text/50 hover:text-accent-1 transition-colors text-sm">Managed IT</Link></li>
               <li><Link href="/services/cloud-modernization" className="text-text/50 hover:text-accent-1 transition-colors text-sm">Cloud Modernization</Link></li>
               <li><Link href="/services/automation-devops" className="text-text/50 hover:text-accent-1 transition-colors text-sm">Automation & DevOps</Link></li>

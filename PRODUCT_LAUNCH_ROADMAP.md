@@ -2,7 +2,7 @@
 
 **Product:** Azure VM Manager  
 **Approach:** Extend and remediate the current 143IT website; no full redesign  
-**Updated:** July 8, 2026  
+**Updated:** July 9, 2026  
 **Status:** Working roadmap  
 **Detailed execution:** [`PRODUCT_LAUNCH_IMPLEMENTATION_CHECKLIST.md`](./PRODUCT_LAUNCH_IMPLEMENTATION_CHECKLIST.md)
 
@@ -147,6 +147,8 @@ A visitor can discover Azure VM Manager, understand its purpose, see the actual 
 
 ### Security and Trust page
 
+Initial draft page added at `/products/azure-vm-manager/security`. The page intentionally separates approved architecture facts from items that still require implementation evidence or formal approval.
+
 Publish an accurate explanation of:
 
 - Required Azure roles and why each is needed
@@ -158,9 +160,11 @@ Publish an accurate explanation of:
 - Product capabilities and explicit boundaries
 - Security contact and vulnerability reporting
 
-Security statements must be verified against the deployed application.
+Security statements must be verified against the deployed application before being treated as final launch commitments.
 
 ### Product Support and SLA
+
+Initial draft page added at `/products/azure-vm-manager/support`. The approved launch support channel is email through `support@143it.com`, and demo requests carry the approved one-business-day response expectation.
 
 Define and publish:
 
@@ -172,9 +176,11 @@ Define and publish:
 - Maintenance windows
 - Exclusions and escalation
 
-These commitments remain undecided and require operational approval.
+Formal support hours, severity definitions, product response targets, uptime language, maintenance windows, exclusions, escalation, and any service-credit policy remain undecided and require operational approval.
 
 ### Legal
+
+Website privacy and terms pages were updated with factual Azure VM Manager demo, assisted-trial, workflow-routing, and automated Azure action disclosures. These are not a substitute for counsel-approved product terms.
 
 Obtain legal review covering:
 
@@ -230,15 +236,14 @@ A cautious buyer can identify who operates the product, understand required Azur
 
 ## 9. Remaining Website Decisions
 
-- Product demonstration format
-- Exact product feature list and current limitations
-- Screenshot source and sanitization process
+- Exact product feature list and current limitations beyond the current public workflow
+- Current screenshot source and sanitization process
 - Support hours, severity definitions, and response targets
 - Product uptime target and maintenance policy
 - Analytics provider, consent behavior, and retention
 - Legal reviewer and approval process
-- Security contact
-- General public contact email if different from `support@143it.com`
+- Exact Azure RBAC roles, scopes, and least-privilege evidence
+- Retry, timeout, duplicate-detection, dead-letter, poison-message, and cancellation policies
 - Exact hybrid-pricing tiers and commercial terms, even though dollar amounts will not be public
 - Named owners for Web, Product, Content, Design, DevOps/Security, Business, and Legal
 
@@ -257,4 +262,3 @@ Do not launch until:
 - [ ] Analytics and consent behavior are verified.
 - [ ] Link, mobile, browser, accessibility, privacy, security, and performance checks pass.
 - [ ] Product, Business, DevOps/Security, Content, and Legal record launch approval.
-

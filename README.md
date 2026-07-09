@@ -14,6 +14,7 @@ Modern, responsive website for **143IT** — a Managed Service Provider speciali
   - Animated gradient orbs and grid patterns
   - 3D card hover effects and floating icons
 - **AI Chatbot Widget**: OpenAI-powered assistant with rate limiting and security features
+- **Azure VM Manager Product Surface**: Product page, guided workflow preview, demo-request funnel, Security & Trust page, and Product Support page
 - **Responsive Design**: Mobile-first, fully responsive across all devices
 - **Advanced SEO**: 
   - Open Graph and Twitter Card metadata
@@ -28,6 +29,7 @@ Modern, responsive website for **143IT** — a Managed Service Provider speciali
   - 7 high-quality technical articles
 - **Integrations**:
   - **Contact Form**: Connected to n8n with validation and rate limiting
+  - **Product Demo Requests**: Azure VM Manager demo requests routed through n8n with business-email and active Azure subscription qualification
   - **Newsletter**: Double opt-in support via n8n
 - **Security**:
   - Content Security Policy (CSP)
@@ -42,14 +44,17 @@ Modern, responsive website for **143IT** — a Managed Service Provider speciali
 ## Pages
 
 ### Main Pages
-- **Home** (`/`) - Hero with typing effect, animated stats, three pillars, featured services, case studies, blog highlights
+- **Home** (`/`) - Product and services overview with credibility-focused positioning
 - **Services** (`/services`) - Comprehensive service offerings with process overview
 - **Blog** (`/blog`) - Dynamic blog feed with real-time search and category filtering
 - **About** (`/about`) - Company story, mission, values, and capabilities
 - **Contact** (`/contact`) - Fully functional contact form with n8n integration
-- **Case Studies** (`/case-studies`) - Real client success stories and results
+- **Build Story** (`/case-studies`) - Truthful Azure VM Manager build story and product rationale
 - **Resources** (`/resources`) - IT guides, tools, downloads, and learning resources
-- **Pricing** (`/pricing`) - Service pricing information
+- **Pricing** (`/pricing`) - Discovery-led service pricing information
+- **Azure VM Manager** (`/products/azure-vm-manager`) - Product overview, guided workflow preview, pricing model, and demo request form
+- **Azure VM Manager Security & Trust** (`/products/azure-vm-manager/security`) - Product security model, boundaries, security contact, and review gates
+- **Azure VM Manager Support** (`/products/azure-vm-manager/support`) - Launch support model, email support channel, and SLA approval gaps
 - **Privacy Policy** (`/legal/privacy`) - Privacy policy and data protection
 - **Terms of Service** (`/legal/terms`) - Terms and conditions
 
@@ -112,6 +117,7 @@ OPENAI_API_KEY=your_actual_api_key_here
 
 # n8n Webhooks (for Forms)
 N8N_CONTACT_WEBHOOK=https://your-n8n-instance.com/webhook/contact
+N8N_PRODUCT_DEMO_WEBHOOK=https://your-n8n-instance.com/webhook/product-demo
 N8N_NEWSLETTER_WEBHOOK=https://your-n8n-instance.com/webhook/newsletter
 ```
 
@@ -410,12 +416,12 @@ Target metrics:
 ## Completed Features
 
 **Core Functionality:**
-- [x] 15 pages (13 static + 7 blog articles)
+- [x] 32 generated routes in the latest production build
+- [x] Azure VM Manager product, demo, security, and support pages
 - [x] Service detail pages (5 pages)
 - [x] Blog article pages with MDX support
-- [x] Animated homepage with typing effects
+- [x] Credibility-focused homepage with product and services positioning
 - [x] Scroll-triggered animations
-- [x] Animated stat counters
 - [x] Syntax highlighting for code blocks
 - [x] Table of contents for blog posts
 - [x] Author info and related posts
@@ -451,8 +457,7 @@ Target metrics:
 
 For questions or support:
 - **Email:** support@143it.com
-- **Phone:** +1 (720) 292-6098
-- **Location:** Remote-First, Serving USA and CA
+- **Location:** Remote, serving the United States and Canada
 
 **Social Media:**
 - **GitHub:** [github.com/iloveyouit](https://github.com/iloveyouit)
@@ -461,4 +466,3 @@ For questions or support:
 ---
 
 **Built with ❤️ by 143IT**
-

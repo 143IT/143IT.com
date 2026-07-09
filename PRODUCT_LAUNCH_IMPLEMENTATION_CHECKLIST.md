@@ -227,39 +227,46 @@ These decisions should be resolved first because they affect multiple implementa
 
 ### P2-01 — Create the Security and Trust page
 
+- [x] Created `/products/azure-vm-manager/security`.
 - [ ] Explain required Azure roles and why each permission is needed.
 - [ ] Verify least-privilege claims against the deployed implementation.
-- [ ] Explain authentication, tenant isolation, encryption, logging, secrets, data flows, retention, subprocessors, and incident handling.
-- [ ] State explicitly what Azure VM Manager cannot access or perform.
-- [ ] Document a security contact and vulnerability-reporting process.
+- [x] Explain authentication, tenant isolation, encryption, logging, secrets, data flows, retention, subprocessors, and incident handling as pending verification items instead of completed claims.
+- [x] State explicitly what Azure VM Manager cannot access or perform.
+- [x] Document a security contact and vulnerability-reporting process.
 - **Closes:** F-10
 - **Blocked by:** D-04
 - **Owner:** Product + DevOps + Security + Content
 - **Acceptance criteria:** A technical buyer can evaluate access and data risk without relying on vague claims.
-- **Verification:** Architecture/security review and permission tests.
+- **Evidence:** Draft Security & Trust page added with explicit review gates; architecture/security review and permission tests remain open.
 
 ### P2-02 — Publish product Support and SLA terms
 
-- [ ] Create product-specific support content separate from MSP services.
-- [ ] Publish approved channels, hours, severity levels, response targets, uptime calculation, maintenance, exclusions, and escalation.
-- [ ] Link support terms from the product and legal surfaces.
+- [x] Created `/products/azure-vm-manager/support`.
+- [x] Create product-specific support content separate from MSP services.
+- [x] Publish approved launch channel as email-only through `support@143it.com`.
+- [x] Publish the approved one-business-day demo response expectation.
+- [ ] Publish support coverage hours, severity levels, response targets, uptime calculation, maintenance, exclusions, and escalation after operational approval.
+- [x] Link support terms from the product surface.
+- [ ] Link support terms from legal surfaces after legal review.
 - **Closes:** F-11
 - **Blocked by:** D-05
 - **Owner:** Product + Business + Content
 - **Acceptance criteria:** Customers know how support works and which commitments are contractual.
-- **Verification:** Operational-owner and legal approval.
+- **Evidence:** Draft Product Support page added with approved email channel and one-business-day demo response; formal support/SLA policy remains open.
 
 ### P2-03 — Update software legal terms and privacy disclosures
 
-- [ ] Cover software licensing, acceptable use, billing, cancellation, intellectual property, warranties, liability, automated Azure actions, suspension, and termination.
-- [ ] Cover product data processing, retention, subprocessors, cookies, analytics, deletion, and privacy requests.
+- [x] Added factual Azure VM Manager demo, trial, and automated Azure action disclosures to the website terms without publishing unapproved SLA or billing commitments.
+- [x] Added factual demo-request and n8n workflow-routing disclosures to the privacy policy.
+- [ ] Cover software licensing, acceptable use, billing, cancellation, intellectual property, warranties, liability, automated Azure actions, suspension, and termination in counsel-approved product terms.
+- [ ] Cover product data processing, retention, subprocessors, cookies, analytics, deletion, and privacy requests in counsel-approved privacy/product data terms.
 - [ ] Determine whether a DPA and subprocessor list are required.
-- [ ] Add version and effective dates.
+- [x] Add version and effective dates to the current website terms and privacy policy.
 - **Closes:** F-12
 - **Blocked by:** D-01, D-04, D-06, D-07
 - **Owner:** Legal + Product
 - **Acceptance criteria:** Counsel approves the published terms for the actual product and sales model.
-- **Verification:** Retain written legal approval; do not treat automated review as legal approval.
+- **Evidence:** Low-risk factual disclosures added July 9, 2026; retain written legal approval before treating these as final product terms.
 
 ### P2-04 — Strengthen company identity and contact information
 

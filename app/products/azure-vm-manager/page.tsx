@@ -8,6 +8,7 @@ import {
   Eye,
   Layers3,
   LockKeyhole,
+  ShieldCheck,
   ServerCog,
 } from "lucide-react";
 import DemoRequestForm from "@/components/DemoRequestForm";
@@ -192,6 +193,59 @@ export default function AzureVmManagerPage() {
                 Discuss your environment
                 <ArrowRight className="h-4 w-4" />
               </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-20 px-6 bg-gradient-to-b from-accent-1/5 to-transparent">
+        <div className="container mx-auto max-w-6xl">
+          <div className="grid lg:grid-cols-[0.8fr_1.2fr] gap-12 items-center">
+            <div>
+              <ShieldCheck className="h-9 w-9 text-accent-1 mb-5" />
+              <h2 className="text-4xl font-heading font-bold mb-5">
+                Review security, support, and launch boundaries
+              </h2>
+              <p className="text-text/70 leading-relaxed">
+                Azure VM Manager is being prepared for assisted launch. Security
+                architecture, Azure access requirements, support expectations, and
+                SLA items are documented separately so buyers can evaluate risk
+                without relying on vague claims.
+              </p>
+            </div>
+            <div className="grid sm:grid-cols-2 gap-5">
+              <Link
+                href="/products/azure-vm-manager/security"
+                className="bg-background/50 border border-accent-1/20 rounded-2xl p-7 hover:border-accent-1/50 transition-colors"
+              >
+                <h3 className="text-2xl font-heading font-bold mb-3">
+                  Security & Trust
+                </h3>
+                <p className="text-text/70 mb-5">
+                  Azure access model, data handling, boundaries, and security
+                  review items.
+                </p>
+                <span className="text-accent-1 font-semibold inline-flex items-center gap-2">
+                  Review controls
+                  <ArrowRight className="h-4 w-4" />
+                </span>
+              </Link>
+              <Link
+                href="/products/azure-vm-manager/support"
+                className="bg-background/50 border border-accent-1/20 rounded-2xl p-7 hover:border-accent-1/50 transition-colors"
+              >
+                <h3 className="text-2xl font-heading font-bold mb-3">
+                  Product Support
+                </h3>
+                <p className="text-text/70 mb-5">
+                  Launch support channel, one-business-day demo response, and SLA
+                  approval gaps.
+                </p>
+                <span className="text-accent-1 font-semibold inline-flex items-center gap-2">
+                  Review support
+                  <ArrowRight className="h-4 w-4" />
+                </span>
+              </Link>
             </div>
           </div>
         </div>

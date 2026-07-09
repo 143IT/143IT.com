@@ -5,6 +5,8 @@ export const metadata: Metadata = {
   description: "143IT Privacy Policy. Learn how we collect, use, and protect your personal information.",
 };
 
+const effectiveDate = "July 9, 2026";
+
 export default function PrivacyPolicyPage() {
   return (
     <div className="pt-24">
@@ -15,7 +17,7 @@ export default function PrivacyPolicyPage() {
             <span className="gradient-text">Privacy Policy</span>
           </h1>
           <p className="text-xl text-text/80">
-            Last Updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+            Last Updated: {effectiveDate}
           </p>
         </div>
       </section>
@@ -51,6 +53,7 @@ export default function PrivacyPolicyPage() {
                   <li>Name and contact information (email address, phone number)</li>
                   <li>Company name and job title</li>
                   <li>Information provided in contact forms or service inquiries</li>
+                  <li>Azure VM Manager demo-request details, such as job role, number of Azure subscriptions, approximate number of virtual machines, active Azure subscription confirmation, and the business challenge you describe</li>
                   <li>Newsletter subscription information</li>
                   <li>Any other information you choose to provide</li>
                 </ul>
@@ -76,6 +79,7 @@ export default function PrivacyPolicyPage() {
                 <ul className="list-disc pl-6 space-y-2">
                   <li>To provide, maintain, and improve our services</li>
                   <li>To respond to your inquiries and provide customer support</li>
+                  <li>To evaluate Azure VM Manager demo requests and assisted-trial eligibility</li>
                   <li>To send you newsletters, marketing communications, and updates (with your consent)</li>
                   <li>To analyze website usage and improve user experience</li>
                   <li>To detect, prevent, and address technical issues</li>
@@ -102,6 +106,7 @@ export default function PrivacyPolicyPage() {
                 <p>We do not sell, trade, or rent your personal information to third parties. We may share your information in the following circumstances:</p>
                 <ul className="list-disc pl-6 space-y-2">
                   <li><strong>Service Providers:</strong> We may share information with third-party service providers who perform services on our behalf</li>
+                  <li><strong>Workflow Automation:</strong> Azure VM Manager demo requests may be routed through n8n or similar workflow tooling so the 143IT team can review and respond</li>
                   <li><strong>Legal Requirements:</strong> We may disclose information if required by law or in response to valid requests by public authorities</li>
                   <li><strong>Business Transfers:</strong> In the event of a merger, acquisition, or sale of assets, your information may be transferred</li>
                   <li><strong>With Your Consent:</strong> We may share information with your explicit consent</li>
@@ -110,7 +115,19 @@ export default function PrivacyPolicyPage() {
 
               <section>
                 <h2 className="text-2xl font-heading font-bold mb-4 text-accent-1">
-                  6. Data Security
+                  6. Product Demo and Trial Data
+                </h2>
+                <p>
+                  Azure VM Manager demo requests are used to understand your environment, schedule a product discussion, and determine whether an assisted trial is appropriate. Please do not submit passwords, client secrets, private keys, confidential tenant data, or sensitive customer records through public website forms.
+                </p>
+                <p>
+                  If you proceed to a product trial or paid product use, additional product-specific data handling terms may apply and should be reviewed in the applicable agreement.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-heading font-bold mb-4 text-accent-1">
+                  7. Data Security
                 </h2>
                 <p>
                   We implement appropriate technical and organizational security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. However, no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.
@@ -119,7 +136,7 @@ export default function PrivacyPolicyPage() {
 
               <section>
                 <h2 className="text-2xl font-heading font-bold mb-4 text-accent-1">
-                  7. Your Rights and Choices
+                  8. Your Rights and Choices
                 </h2>
                 <p>Depending on your location, you may have certain rights regarding your personal information, including:</p>
                 <ul className="list-disc pl-6 space-y-2">
@@ -136,7 +153,7 @@ export default function PrivacyPolicyPage() {
 
               <section>
                 <h2 className="text-2xl font-heading font-bold mb-4 text-accent-1">
-                  8. Children's Privacy
+                  9. Children's Privacy
                 </h2>
                 <p>
                   Our website is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us.
@@ -145,7 +162,7 @@ export default function PrivacyPolicyPage() {
 
               <section>
                 <h2 className="text-2xl font-heading font-bold mb-4 text-accent-1">
-                  9. Third-Party Links
+                  10. Third-Party Links
                 </h2>
                 <p>
                   Our website may contain links to third-party websites. We are not responsible for the privacy practices or content of these third-party sites. We encourage you to review the privacy policies of any third-party sites you visit.
@@ -154,7 +171,7 @@ export default function PrivacyPolicyPage() {
 
               <section>
                 <h2 className="text-2xl font-heading font-bold mb-4 text-accent-1">
-                  10. Changes to This Privacy Policy
+                  11. Changes to This Privacy Policy
                 </h2>
                 <p>
                   We may update this Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date. You are advised to review this Privacy Policy periodically for any changes.
@@ -163,7 +180,7 @@ export default function PrivacyPolicyPage() {
 
               <section>
                 <h2 className="text-2xl font-heading font-bold mb-4 text-accent-1">
-                  11. Contact Us
+                  12. Contact Us
                 </h2>
                 <p>
                   If you have any questions about this Privacy Policy, please contact us:
@@ -182,4 +199,3 @@ export default function PrivacyPolicyPage() {
     </div>
   );
 }
-

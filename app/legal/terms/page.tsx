@@ -5,6 +5,8 @@ export const metadata: Metadata = {
   description: "143IT Terms of Service. Read our terms and conditions for using our website and services.",
 };
 
+const effectiveDate = "July 9, 2026";
+
 export default function TermsOfServicePage() {
   return (
     <div className="pt-24">
@@ -15,7 +17,7 @@ export default function TermsOfServicePage() {
             <span className="gradient-text">Terms of Service</span>
           </h1>
           <p className="text-xl text-text/80">
-            Last Updated: {new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' })}
+            Last Updated: {effectiveDate}
           </p>
         </div>
       </section>
@@ -97,11 +99,35 @@ export default function TermsOfServicePage() {
                 <p>
                   Any services described on this Website are subject to separate service agreements. The information on this Website does not constitute a binding offer or contract unless explicitly stated.
                 </p>
+                <p>
+                  Azure VM Manager product demos, assisted trials, and paid product use may be subject to additional written terms, order forms, data-processing terms, acceptable-use requirements, and Azure access approvals. Website content does not create a production support SLA, uptime guarantee, service-credit right, or paid product subscription unless those commitments are included in a separate agreement signed or otherwise accepted by 143IT.
+                </p>
               </section>
 
               <section>
                 <h2 className="text-2xl font-heading font-bold mb-4 text-accent-1">
-                  6. Disclaimer of Warranties
+                  6. Azure VM Manager Demo Requests
+                </h2>
+                <p>
+                  Demo-request forms are intended for business inquiries. You agree not to submit passwords, private keys, client secrets, regulated data, confidential customer records, or other sensitive information through public website forms.
+                </p>
+                <p>
+                  Submitting a demo request does not guarantee access to an assisted trial. 143IT may review eligibility, including business email use and active Azure subscription confirmation, before approving a trial.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-heading font-bold mb-4 text-accent-1">
+                  7. Automated Azure Actions
+                </h2>
+                <p>
+                  Azure VM Manager is intended to help request, track, and audit Azure virtual machine operations. Any production use should be configured with customer-approved Azure access, appropriate authorization, and operational review. Customers remain responsible for validating requested actions, Azure costs, subscription permissions, and compliance with their internal policies.
+                </p>
+              </section>
+
+              <section>
+                <h2 className="text-2xl font-heading font-bold mb-4 text-accent-1">
+                  8. Disclaimer of Warranties
                 </h2>
                 <p>
                   THE WEBSITE IS PROVIDED "AS IS" AND "AS AVAILABLE" WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT.
@@ -113,7 +139,7 @@ export default function TermsOfServicePage() {
 
               <section>
                 <h2 className="text-2xl font-heading font-bold mb-4 text-accent-1">
-                  7. Limitation of Liability
+                  9. Limitation of Liability
                 </h2>
                 <p>
                   TO THE MAXIMUM EXTENT PERMITTED BY LAW, 143IT SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY, OR ANY LOSS OF DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES RESULTING FROM YOUR USE OF THE WEBSITE.
@@ -122,7 +148,7 @@ export default function TermsOfServicePage() {
 
               <section>
                 <h2 className="text-2xl font-heading font-bold mb-4 text-accent-1">
-                  8. Indemnification
+                  10. Indemnification
                 </h2>
                 <p>
                   You agree to indemnify, defend, and hold harmless 143IT and its officers, directors, employees, and agents from and against any claims, liabilities, damages, losses, and expenses (including reasonable attorneys' fees) arising out of or in any way connected with your use of the Website or violation of these Terms.
@@ -131,7 +157,7 @@ export default function TermsOfServicePage() {
 
               <section>
                 <h2 className="text-2xl font-heading font-bold mb-4 text-accent-1">
-                  9. Third-Party Links
+                  11. Third-Party Links
                 </h2>
                 <p>
                   Our Website may contain links to third-party websites or services. We are not responsible for the content, privacy policies, or practices of any third-party sites. Your use of third-party sites is at your own risk.
@@ -140,7 +166,7 @@ export default function TermsOfServicePage() {
 
               <section>
                 <h2 className="text-2xl font-heading font-bold mb-4 text-accent-1">
-                  10. Termination
+                  12. Termination
                 </h2>
                 <p>
                   We reserve the right to terminate or suspend your access to the Website at any time, without prior notice, for any reason, including if you breach these Terms.
@@ -152,7 +178,7 @@ export default function TermsOfServicePage() {
 
               <section>
                 <h2 className="text-2xl font-heading font-bold mb-4 text-accent-1">
-                  11. Governing Law
+                  13. Governing Law
                 </h2>
                 <p>
                   These Terms shall be governed by and construed in accordance with the laws of the United States, without regard to its conflict of law provisions. Any disputes arising from these Terms or your use of the Website shall be resolved in the appropriate courts.
@@ -161,7 +187,7 @@ export default function TermsOfServicePage() {
 
               <section>
                 <h2 className="text-2xl font-heading font-bold mb-4 text-accent-1">
-                  12. Severability
+                  14. Severability
                 </h2>
                 <p>
                   If any provision of these Terms is found to be unenforceable or invalid, that provision shall be limited or eliminated to the minimum extent necessary, and the remaining provisions shall remain in full force and effect.
@@ -170,7 +196,7 @@ export default function TermsOfServicePage() {
 
               <section>
                 <h2 className="text-2xl font-heading font-bold mb-4 text-accent-1">
-                  13. Entire Agreement
+                  15. Entire Agreement
                 </h2>
                 <p>
                   These Terms constitute the entire agreement between you and 143IT regarding your use of the Website and supersede all prior agreements and understandings.
@@ -179,7 +205,7 @@ export default function TermsOfServicePage() {
 
               <section>
                 <h2 className="text-2xl font-heading font-bold mb-4 text-accent-1">
-                  14. Contact Information
+                  16. Contact Information
                 </h2>
                 <p>
                   If you have any questions about these Terms of Service, please contact us:
@@ -198,4 +224,3 @@ export default function TermsOfServicePage() {
     </div>
   );
 }
-
