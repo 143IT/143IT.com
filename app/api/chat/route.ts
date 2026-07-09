@@ -35,7 +35,7 @@ Company Information:
 Core Services:
 
 1. Managed IT Services
-   - 24/7 infrastructure monitoring and management
+   - Infrastructure monitoring and management scoped to customer requirements
    - Proactive maintenance and support
    - Help desk and end-user support
    - Network and server management
@@ -59,7 +59,7 @@ Core Services:
    - Intelligent document processing
 
 5. Security & Compliance
-   - Security Operations Center (SOC)
+   - Security monitoring assessment and operations planning
    - Identity and Access Management (IAM)
    - Compliance frameworks (SOC2, HIPAA, etc.)
    - Zero-trust architecture

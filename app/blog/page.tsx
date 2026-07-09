@@ -1,13 +1,8 @@
 "use client";
 
 import Link from "next/link";
-import { useState, useMemo } from "react";
+import { useState } from "react";
 import { Calendar, Clock, Search, Tag } from "lucide-react";
-import type { Metadata } from "next";
-
-// Note: Metadata export is not supported in client components
-// Consider moving metadata to a layout or using generateMetadata in a parent
-
 export default function BlogPage() {
   const featured = {
     category: "Automation Chronicles",
@@ -84,7 +79,7 @@ export default function BlogPage() {
   const [selectedCategory, setSelectedCategory] = useState("All Posts");
 
   // Filter and search posts
-  const filteredPosts = useMemo(() => {
+  const filteredPosts = (() => {
     let filtered = allPosts;
 
     // Filter by category
@@ -104,7 +99,7 @@ export default function BlogPage() {
     }
 
     return filtered;
-  }, [searchQuery, selectedCategory]);
+  })();
 
   return (
     <div className="pt-24">
@@ -112,10 +107,11 @@ export default function BlogPage() {
       <section className="py-20 px-6 bg-gradient-to-b from-accent-1/5 to-transparent">
         <div className="container mx-auto max-w-4xl text-center">
           <h1 className="text-5xl md:text-6xl font-heading font-bold mb-6">
-            <span className="gradient-text">Insights</span> That Make IT Simpler
+            Technical <span className="gradient-text">Article Archive</span>
           </h1>
           <p className="text-xl text-text/80 mb-8">
-            Thought leadership in IT, automation, and AI integration
+            Earlier technical articles preserved for reference. Publication dates
+            are shown so readers can evaluate their currency.
           </p>
 
           {/* Search Bar */}
@@ -164,7 +160,7 @@ export default function BlogPage() {
             <div className="bg-gradient-to-br from-accent-1/10 to-accent-2/10 border border-accent-1/30 rounded-2xl p-8 md:p-12 card-glow">
               <div className="flex items-center space-x-2 mb-4">
                 <Tag className="h-4 w-4 text-accent-1" />
-                <span className="text-accent-1 text-sm font-semibold">Featured Post</span>
+                <span className="text-accent-1 text-sm font-semibold">Archive Highlight</span>
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">

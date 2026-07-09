@@ -44,13 +44,6 @@ export default function AutomationDevOpsPage() {
     "Documentation Automation",
   ];
 
-  const benefits = [
-    { metric: "10x", label: "Faster Deployments" },
-    { metric: "85%", label: "Reduced Manual Work" },
-    { metric: "50%", label: "Fewer Incidents" },
-    { metric: "100%", label: "Reproducible Builds" },
-  ];
-
   const tools = [
     { name: "Terraform", category: "IaC" },
     { name: "Ansible", category: "Config Management" },
@@ -99,22 +92,6 @@ export default function AutomationDevOpsPage() {
             <Link href="/services" className="btn-secondary">
               View All Services
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Stats */}
-      <section className="py-12 px-6">
-        <div className="container mx-auto max-w-5xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center bg-background/50 backdrop-blur-sm border border-accent-1/20 rounded-xl p-6">
-                <div className="text-3xl md:text-4xl font-heading font-bold gradient-text mb-2">
-                  {benefit.metric}
-                </div>
-                <div className="text-text/60 text-sm">{benefit.label}</div>
-              </div>
-            ))}
           </div>
         </div>
       </section>

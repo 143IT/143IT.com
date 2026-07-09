@@ -4,15 +4,15 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Security & Compliance Services | 143IT",
-  description: "SOC operations, identity management, patching strategies, and comprehensive backup solutions for enterprise security.",
+  description: "Security planning, identity management, patching, backup, and compliance-readiness services scoped to your environment.",
 };
 
 export default function SecurityCompliancePage() {
   const features = [
     {
       icon: Eye,
-      title: "Security Operations Center",
-      description: "24/7 threat monitoring, detection, and response with advanced SIEM and threat intelligence.",
+      title: "Security Operations Planning",
+      description: "Assess monitoring, detection, escalation, and response requirements before selecting or integrating security tooling.",
     },
     {
       icon: Lock,
@@ -32,8 +32,8 @@ export default function SecurityCompliancePage() {
   ];
 
   const services = [
-    "24/7 Security Operations Center (SOC)",
-    "Threat Detection & Response",
+    "Security Monitoring Assessment",
+    "Threat Detection & Response Planning",
     "Identity & Access Management (IAM)",
     "Multi-Factor Authentication (MFA)",
     "Vulnerability Scanning & Assessment",
@@ -42,13 +42,6 @@ export default function SecurityCompliancePage() {
     "Compliance Audits & Reporting",
     "Security Awareness Training",
     "Incident Response Planning",
-  ];
-
-  const benefits = [
-    { metric: "< 5min", label: "Threat Detection Time" },
-    { metric: "99.9%", label: "Backup Success Rate" },
-    { metric: "100%", label: "Compliance Coverage" },
-    { metric: "Zero", label: "Data Loss Incidents" },
   ];
 
   const complianceFrameworks = [
@@ -91,7 +84,7 @@ export default function SecurityCompliancePage() {
             </h1>
           </div>
           <p className="text-xl md:text-2xl text-text/80 mb-8 max-w-3xl">
-            SOC operations, identity management, patching strategies, and comprehensive backup solutions for enterprise security.
+            Security planning, identity management, patching, backup, and compliance-readiness services scoped to your environment.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href="/contact" className="btn-primary inline-flex items-center space-x-2">
@@ -101,22 +94,6 @@ export default function SecurityCompliancePage() {
             <Link href="/services" className="btn-secondary">
               View All Services
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Stats */}
-      <section className="py-12 px-6">
-        <div className="container mx-auto max-w-5xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center bg-background/50 backdrop-blur-sm border border-accent-1/20 rounded-xl p-6">
-                <div className="text-3xl md:text-4xl font-heading font-bold gradient-text mb-2">
-                  {benefit.metric}
-                </div>
-                <div className="text-text/60 text-sm">{benefit.label}</div>
-              </div>
-            ))}
           </div>
         </div>
       </section>

@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/contact',
     '/pricing',
     '/case-studies',
+    '/products/azure-vm-manager',
     '/resources',
     '/legal/privacy',
     '/legal/terms',
@@ -46,4 +47,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   return routes;
 }
-

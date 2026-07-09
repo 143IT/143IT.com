@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, Phone, MapPin, Send, CheckCircle, Sparkles } from "lucide-react";
+import { Mail, MapPin, Send, CheckCircle, Sparkles } from "lucide-react";
 import { motion } from "framer-motion";
 import FadeInSection from "@/components/FadeInSection";
 
@@ -74,16 +74,9 @@ export default function ContactPage() {
       gradient: "from-accent-1 to-amber-500",
     },
     {
-      icon: Phone,
-      title: "Phone",
-      value: "+1 (720) 292-6098",
-      href: "tel:+17202926098",
-      gradient: "from-accent-cyan to-blue-500",
-    },
-    {
       icon: MapPin,
       title: "Location",
-      value: "Remote-First, Serving USA and CA",
+      value: "Remote, serving the United States and Canada",
       href: null,
       gradient: "from-accent-purple to-pink-500",
     },
@@ -178,8 +171,8 @@ export default function ContactPage() {
                 <div className="glass-card p-6">
                   <h3 className="font-heading font-bold mb-3 text-text">Response Time</h3>
                   <p className="text-text/60 text-sm leading-relaxed">
-                    We typically respond within 24 hours during business days. For urgent matters,
-                    please call us directly.
+                    We respond to product demo requests within one business day.
+                    Other inquiries are handled by email during business days.
                   </p>
                 </div>
               </FadeInSection>
@@ -368,4 +361,3 @@ export default function ContactPage() {
     </div>
   );
 }
-

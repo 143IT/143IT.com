@@ -9,10 +9,11 @@ export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navigation = [
+    { name: "Product", href: "/products/azure-vm-manager" },
     { name: "Services", href: "/services" },
     { name: "Pricing", href: "/pricing" },
     { name: "Blog", href: "/blog" },
-    { name: "Case Studies", href: "/case-studies" },
+    { name: "Build Story", href: "/case-studies" },
     { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
   ];
@@ -36,7 +37,7 @@ export default function Header() {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-6">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -47,8 +48,8 @@ export default function Header() {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-accent-1 to-accent-cyan group-hover:w-full transition-all duration-300" />
               </Link>
             ))}
-            <Link href="/contact" className="btn-primary">
-              Get Started
+            <Link href="/products/azure-vm-manager#request-demo" className="btn-primary">
+              Request a Demo
             </Link>
           </div>
 
@@ -102,11 +103,11 @@ export default function Header() {
                 transition={{ delay: navigation.length * 0.05 }}
               >
                 <Link
-                  href="/contact"
+                  href="/products/azure-vm-manager#request-demo"
                   className="block w-full text-center btn-primary mt-4"
                   onClick={() => setMobileMenuOpen(false)}
                 >
-                  Get Started
+                  Request a Demo
                 </Link>
               </motion.div>
             </motion.div>
@@ -116,4 +117,3 @@ export default function Header() {
     </header>
   );
 }
-

@@ -3,8 +3,6 @@
 import Link from "next/link";
 import { ArrowRight, Sparkles, Zap, Shield, Cloud } from "lucide-react";
 import { motion } from "framer-motion";
-import TypingEffect from "./TypingEffect";
-import AnimatedCounter from "./AnimatedCounter";
 import FadeInSection from "./FadeInSection";
 
 export default function Hero() {
@@ -101,7 +99,7 @@ export default function Hero() {
           <FadeInSection delay={0.3}>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-heading font-bold mb-8 leading-tight">
               <span className="gradient-text glow-effect">
-                <TypingEffect text="Automate & Dominate" speed={80} />
+                Automate &amp; Dominate
               </span>
               <br />
               <span className="text-text/90">with AI</span>
@@ -122,48 +120,12 @@ export default function Hero() {
                 <span>Explore Services</span>
                 <ArrowRight className="h-5 w-5" />
               </Link>
-              <Link href="/blog" className="btn-secondary inline-flex items-center space-x-3 text-lg px-8 py-4">
-                <span>Read the Blog</span>
+              <Link href="/products/azure-vm-manager" className="btn-secondary inline-flex items-center space-x-3 text-lg px-8 py-4">
+                <span>Explore Azure VM Manager</span>
               </Link>
             </div>
           </FadeInSection>
 
-          {/* Stats with Glassmorphism */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-24 max-w-4xl mx-auto">
-            <FadeInSection delay={0.9}>
-              <motion.div
-                className="glass-card-hover p-8 text-center"
-                whileHover={{ y: -5 }}
-              >
-                <div className="text-5xl font-heading font-bold gradient-text mb-3">
-                  <AnimatedCounter value={99.9} decimals={1} suffix="%" />
-                </div>
-                <div className="text-text/60 font-medium">Uptime Guarantee</div>
-              </motion.div>
-            </FadeInSection>
-            <FadeInSection delay={1.0}>
-              <motion.div
-                className="glass-card-hover p-8 text-center"
-                whileHover={{ y: -5 }}
-              >
-                <div className="text-5xl font-heading font-bold gradient-text mb-3">
-                  <AnimatedCounter value={10} suffix="k+" />
-                </div>
-                <div className="text-text/60 font-medium">Automation Hours Saved</div>
-              </motion.div>
-            </FadeInSection>
-            <FadeInSection delay={1.1}>
-              <motion.div
-                className="glass-card-hover p-8 text-center"
-                whileHover={{ y: -5 }}
-              >
-                <div className="text-5xl font-heading font-bold gradient-text mb-3">
-                  <AnimatedCounter value={500} suffix="+" />
-                </div>
-                <div className="text-text/60 font-medium">Systems Managed</div>
-              </motion.div>
-            </FadeInSection>
-          </div>
         </div>
       </div>
 
@@ -172,4 +134,3 @@ export default function Hero() {
     </section>
   );
 }
-

@@ -44,28 +44,21 @@ export default function AIIntegrationPage() {
     "AI Strategy & Consulting",
   ];
 
-  const benefits = [
-    { metric: "70%", label: "Time Savings" },
-    { metric: "95%", label: "Accuracy Improvement" },
-    { metric: "24/7", label: "AI Availability" },
-    { metric: "$100k+", label: "Annual Cost Savings" },
-  ];
-
   const useCases = [
     {
       title: "IT Support Automation",
       description: "AI-powered ticket classification, automated responses, and intelligent routing to reduce support workload.",
-      example: "Chatbot handles 60% of Tier 1 tickets",
+      example: "Define and validate which requests are safe to automate",
     },
     {
       title: "Documentation Generation",
       description: "Automatically generate runbooks, API docs, and technical documentation from code and infrastructure.",
-      example: "Save 20+ hours/week on documentation",
+      example: "Generate drafts with human review and source validation",
     },
     {
       title: "Intelligent Monitoring",
       description: "AI analyzes logs, metrics, and events to predict issues before they cause outages.",
-      example: "Reduce MTTR by 50% with predictive alerts",
+      example: "Prioritize signals while keeping operators in control",
     },
   ];
 
@@ -102,22 +95,6 @@ export default function AIIntegrationPage() {
             <Link href="/services" className="btn-secondary">
               View All Services
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Stats */}
-      <section className="py-12 px-6">
-        <div className="container mx-auto max-w-5xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center bg-background/50 backdrop-blur-sm border border-accent-1/20 rounded-xl p-6">
-                <div className="text-3xl md:text-4xl font-heading font-bold gradient-text mb-2">
-                  {benefit.metric}
-                </div>
-                <div className="text-text/60 text-sm">{benefit.label}</div>
-              </div>
-            ))}
           </div>
         </div>
       </section>

@@ -31,7 +31,7 @@ export default function FeaturedServices() {
     {
       icon: Shield,
       title: "Security & Compliance",
-      description: "SOC operations, identity management, patching, and backup strategies.",
+      description: "Security planning, identity management, patching, backup, and compliance readiness.",
       href: "/services/security-compliance",
       gradient: "from-accent-emerald to-teal-500",
     },
@@ -118,4 +118,3 @@ export default function FeaturedServices() {
     </section>
   );
 }
-

@@ -4,15 +4,15 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "Cloud Migration & Modernization Services | 143IT",
-  description: "Seamless migration and optimization for Azure, AWS, and hybrid cloud platforms with zero-downtime strategies.",
+  description: "Planned migration and optimization services for Azure, AWS, and hybrid cloud platforms.",
 };
 
 export default function CloudModernizationPage() {
   const features = [
     {
       icon: Gauge,
-      title: "Zero-Downtime Migration",
-      description: "Carefully planned migrations that keep your business running throughout the transition.",
+      title: "Continuity-Focused Migration",
+      description: "Carefully planned migrations designed to reduce disruption and include agreed validation and rollback steps.",
     },
     {
       icon: DollarSign,
@@ -42,13 +42,6 @@ export default function CloudModernizationPage() {
     "Performance Optimization",
     "Disaster Recovery Planning",
     "Cloud Governance & Security",
-  ];
-
-  const benefits = [
-    { metric: "60%", label: "Faster Deployment" },
-    { metric: "30%", label: "Cost Reduction" },
-    { metric: "99.99%", label: "Uptime SLA" },
-    { metric: "3x", label: "Scalability Increase" },
   ];
 
   const migrationProcess = [
@@ -86,7 +79,7 @@ export default function CloudModernizationPage() {
             </h1>
           </div>
           <p className="text-xl md:text-2xl text-text/80 mb-8 max-w-3xl">
-            Seamless migration and optimization for Azure, AWS, and hybrid cloud platforms with zero-downtime strategies.
+            Planned migration and optimization for Azure, AWS, and hybrid cloud platforms with continuity and validation built into the scope.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href="/contact" className="btn-primary inline-flex items-center space-x-2">
@@ -96,22 +89,6 @@ export default function CloudModernizationPage() {
             <Link href="/services" className="btn-secondary">
               View All Services
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Stats */}
-      <section className="py-12 px-6">
-        <div className="container mx-auto max-w-5xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center bg-background/50 backdrop-blur-sm border border-accent-1/20 rounded-xl p-6">
-                <div className="text-3xl md:text-4xl font-heading font-bold gradient-text mb-2">
-                  {benefit.metric}
-                </div>
-                <div className="text-text/60 text-sm">{benefit.label}</div>
-              </div>
-            ))}
           </div>
         </div>
       </section>

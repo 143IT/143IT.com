@@ -7,7 +7,6 @@ import { motion } from "framer-motion";
 export default function Footer() {
   const socialLinks = [
     { icon: Linkedin, href: "https://www.linkedin.com/in/rob-loftin-143it", label: "LinkedIn" },
-    { icon: Twitter, href: "#", label: "Twitter" },
     { icon: Github, href: "https://github.com/iloveyouit", label: "GitHub" },
     { icon: Mail, href: "mailto:support@143it.com", label: "Email" },
   ];
@@ -62,6 +61,7 @@ export default function Footer() {
           <div>
             <h3 className="font-heading font-bold text-text mb-6 text-lg">Services</h3>
             <ul className="space-y-3">
+              <li><Link href="/products/azure-vm-manager" className="text-text/50 hover:text-accent-1 transition-colors text-sm">Azure VM Manager</Link></li>
               <li><Link href="/services/managed-it" className="text-text/50 hover:text-accent-1 transition-colors text-sm">Managed IT</Link></li>
               <li><Link href="/services/cloud-modernization" className="text-text/50 hover:text-accent-1 transition-colors text-sm">Cloud Modernization</Link></li>
               <li><Link href="/services/automation-devops" className="text-text/50 hover:text-accent-1 transition-colors text-sm">Automation & DevOps</Link></li>
@@ -76,7 +76,7 @@ export default function Footer() {
             <ul className="space-y-3">
               <li><Link href="/about" className="text-text/50 hover:text-accent-1 transition-colors text-sm">About</Link></li>
               <li><Link href="/blog" className="text-text/50 hover:text-accent-1 transition-colors text-sm">Blog</Link></li>
-              <li><Link href="/case-studies" className="text-text/50 hover:text-accent-1 transition-colors text-sm">Case Studies</Link></li>
+              <li><Link href="/case-studies" className="text-text/50 hover:text-accent-1 transition-colors text-sm">Build Story</Link></li>
               <li><Link href="/contact" className="text-text/50 hover:text-accent-1 transition-colors text-sm">Contact</Link></li>
               <li><Link href="/resources" className="text-text/50 hover:text-accent-1 transition-colors text-sm">Resources</Link></li>
             </ul>
@@ -101,4 +101,3 @@ export default function Footer() {
     </footer>
   );
 }
-

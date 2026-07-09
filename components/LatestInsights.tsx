@@ -34,10 +34,10 @@ export default function LatestInsights() {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">
-            <span className="gradient-text">Latest Insights</span>
+            Technical <span className="gradient-text">Article Archive</span>
           </h2>
           <p className="text-lg text-text/80 max-w-2xl mx-auto">
-            Thought leadership in IT, automation, and AI integration
+            Earlier articles preserved for reference; publication dates are shown clearly
           </p>
         </div>
 
@@ -83,7 +83,7 @@ export default function LatestInsights() {
 
         <div className="text-center mt-12">
           <Link href="/blog" className="btn-secondary">
-            View All Posts
+            Browse the Archive
           </Link>
         </div>
       </div>

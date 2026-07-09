@@ -6,7 +6,7 @@ import StructuredData from "@/components/StructuredData";
 
 export const metadata: Metadata = genMeta({
   title: "Managed IT Infrastructure Services | 143IT",
-  description: "Enterprise-grade management of Windows, VMware, Azure, and M365 environments with 24/7 monitoring and proactive support.",
+  description: "Scoped management and operational support for Windows, VMware, Azure, and M365 environments.",
   path: "/services/managed-it",
 });
 
@@ -14,8 +14,8 @@ export default function ManagedITPage() {
   const features = [
     {
       icon: Clock,
-      title: "24/7 Monitoring & Support",
-      description: "Round-the-clock infrastructure monitoring with rapid incident response and resolution.",
+      title: "Monitoring & Operational Support",
+      description: "Monitoring and response coverage defined around your environment and approved service scope.",
     },
     {
       icon: Shield,
@@ -47,13 +47,6 @@ export default function ManagedITPage() {
     "Service Level Agreement (SLA) Compliance",
   ];
 
-  const benefits = [
-    { metric: "99.9%", label: "Uptime Guarantee" },
-    { metric: "< 15min", label: "Average Response Time" },
-    { metric: "40%", label: "Cost Reduction vs In-House" },
-    { metric: "24/7", label: "Expert Support" },
-  ];
-
   const useCases = [
     {
       title: "Growing Businesses",
@@ -75,14 +68,14 @@ export default function ManagedITPage() {
         type="Service"
         data={{
           name: "Managed IT Infrastructure Services",
-          description: "Enterprise-grade management of Windows, VMware, Azure, and M365 environments with 24/7 monitoring and proactive support.",
+          description: "Scoped management and operational support for Windows, VMware, Azure, and M365 environments.",
           url: "https://143it.com/services/managed-it",
           areaServed: ["US", "CA"],
           serviceType: "IT Infrastructure Management",
           offers: {
             "@type": "Offer",
             name: "Managed IT Infrastructure",
-            description: "24/7 monitoring, proactive maintenance, and expert support for your IT infrastructure.",
+            description: "Monitoring, maintenance, and operational support defined in an approved service scope.",
           },
         }}
       />
@@ -97,7 +90,7 @@ export default function ManagedITPage() {
             </h1>
           </div>
           <p className="text-xl md:text-2xl text-text/80 mb-8 max-w-3xl">
-            Enterprise-grade management of Windows, VMware, Azure, and M365 environments with 24/7 monitoring and proactive support.
+            Scoped management and operational support for Windows, VMware, Azure, and M365 environments.
           </p>
           <div className="flex flex-wrap gap-4">
             <Link href="/contact" className="btn-primary inline-flex items-center space-x-2">
@@ -107,22 +100,6 @@ export default function ManagedITPage() {
             <Link href="/services" className="btn-secondary">
               View All Services
             </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Benefits Stats */}
-      <section className="py-12 px-6">
-        <div className="container mx-auto max-w-5xl">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            {benefits.map((benefit, index) => (
-              <div key={index} className="text-center bg-background/50 backdrop-blur-sm border border-accent-1/20 rounded-xl p-6">
-                <div className="text-3xl md:text-4xl font-heading font-bold gradient-text mb-2">
-                  {benefit.metric}
-                </div>
-                <div className="text-text/60 text-sm">{benefit.label}</div>
-              </div>
-            ))}
           </div>
         </div>
       </section>

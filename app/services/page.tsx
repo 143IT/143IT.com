@@ -12,9 +12,9 @@ export default function ServicesPage() {
     {
       icon: Database,
       title: "Managed Infrastructure",
-      description: "Enterprise-grade management of Windows, VMware, Azure, and M365 environments with 24/7 monitoring and proactive support.",
+      description: "Scoped management of Windows, VMware, Azure, and M365 environments with monitoring and operational support.",
       features: [
-        "24/7 infrastructure monitoring",
+        "Infrastructure monitoring",
         "Patch and update management",
         "Performance optimization",
         "Capacity planning",
@@ -51,9 +51,9 @@ export default function ServicesPage() {
     {
       icon: Shield,
       title: "Security & Compliance",
-      description: "SOC operations, identity management, patching strategies, and comprehensive backup solutions.",
+      description: "Security planning, identity management, patching, backup, and compliance-readiness services.",
       features: [
-        "Security Operations Center (SOC)",
+        "Security monitoring assessment",
         "Identity & access management",
         "Vulnerability management",
         "Compliance monitoring",
