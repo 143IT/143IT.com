@@ -90,7 +90,7 @@ export default function Hero() {
             >
               <Sparkles className="h-4 w-4 text-accent-1" />
               <span className="text-sm text-accent-1 font-medium tracking-wide">
-                Automation-First MSP Services
+                Automation-First MSP Services for Dallas-Fort Worth, Texas & North America
               </span>
             </motion.div>
           </FadeInSection>
@@ -109,7 +109,7 @@ export default function Hero() {
           {/* Subheadline */}
           <FadeInSection delay={0.5}>
             <p className="text-xl md:text-2xl text-text/70 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Next-Gen IT Management with <span className="text-accent-cyan font-medium">Cloud</span>, <span className="text-accent-1 font-medium">Automation</span>, and <span className="text-accent-purple font-medium">AI</span> at the Core.
+              143IT provides next-generation IT management for Dallas, Fort Worth, DFW, Texas, and North American teams with <span className="text-accent-cyan font-medium">Cloud</span>, <span className="text-accent-1 font-medium">Automation</span>, and <span className="text-accent-purple font-medium">AI</span> at the Core.
             </p>
           </FadeInSection>
 

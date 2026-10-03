@@ -18,6 +18,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '/products/azure-vm-manager/security',
     '/products/azure-vm-manager/support',
     '/resources',
+    '/resources/ai-search-measurement',
     '/legal/privacy',
     '/legal/terms',
     '/services/managed-it',

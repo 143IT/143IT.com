@@ -1,25 +1,27 @@
 import type { Metadata } from "next";
+import { site } from "@/lib/site";
 
 interface StructuredDataProps {
-  type?: "Organization" | "WebSite" | "Service" | "BlogPosting" | "SoftwareApplication";
+  type?: "Organization" | "LocalBusiness" | "WebSite" | "Service" | "BlogPosting" | "SoftwareApplication" | "BreadcrumbList" | "FAQPage";
   data?: Record<string, any>;
 }
 
 export default function StructuredData({ type = "Organization", data }: StructuredDataProps) {
-  const baseUrl = "https://143it.com";
+  const baseUrl = site.url;
   
   const baseOrganization = {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "143IT",
     url: baseUrl,
-    logo: `${baseUrl}/logo.svg`,
-    description: "Next-Gen IT Management with Cloud, Automation, and AI at the Core.",
+    logo: site.logo,
+    description: site.description,
+    areaServed: site.serviceArea,
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "Customer Service",
-      email: "support@143it.com",
-      areaServed: ["US", "CA"],
+      email: site.email,
+      areaServed: site.serviceArea,
     },
     sameAs: [
       "https://github.com/iloveyouit",
@@ -44,6 +46,21 @@ export default function StructuredData({ type = "Organization", data }: Structur
   switch (type) {
     case "Organization":
       structuredData = { ...baseOrganization, ...data };
+      break;
+    case "LocalBusiness":
+      structuredData = {
+        ...baseOrganization,
+        "@type": "LocalBusiness",
+        email: site.email,
+        priceRange: "Custom managed-service and project pricing",
+        areaServed: site.serviceArea.map((name) => ({ "@type": "Place", name })),
+        address: {
+          "@type": "PostalAddress",
+          addressRegion: "TX",
+          addressCountry: "US",
+        },
+        ...data,
+      };
       break;
     case "WebSite":
       structuredData = { ...website, ...data };
@@ -87,6 +104,20 @@ export default function StructuredData({ type = "Organization", data }: Structur
         },
         applicationCategory: "BusinessApplication",
         operatingSystem: "Web",
+        ...data,
+      };
+      break;
+    case "BreadcrumbList":
+      structuredData = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        ...data,
+      };
+      break;
+    case "FAQPage":
+      structuredData = {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
         ...data,
       };
       break;

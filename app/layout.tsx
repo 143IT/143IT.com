@@ -21,8 +21,8 @@ const orbitron = Orbitron({
 });
 
 export const metadata: Metadata = {
-  title: "143IT — Automate & Dominate with AI",
-  description: "143IT provides cloud, automation, and AI-enabled infrastructure services and builds Azure VM Manager for controlled Azure VM operations.",
+  title: "143IT — Dallas-Fort Worth Managed IT, Cloud Automation & AI",
+  description: "143IT provides managed IT, cloud automation, DevOps, security, compliance, and AI infrastructure services for businesses in Dallas-Fort Worth, Texas, the United States, and Canada.",
   keywords: ["MSP", "Managed Services", "IT Automation", "Cloud Migration", "DevOps", "AI Integration", "Azure", "M365", "Next-Gen IT"],
   authors: [{ name: "143IT" }],
   openGraph: {
@@ -57,6 +57,7 @@ export default function RootLayout({
     <html lang="en" className={`${inter.variable} ${orbitron.variable}`}>
       <body>
         <StructuredData type="Organization" />
+        <StructuredData type="LocalBusiness" />
         <StructuredData type="WebSite" />
         <ErrorBoundary>
           <a

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Cloud, Shield, Bot, Workflow, Database, ArrowRight, CheckCircle2 } from "lucide-react";
 import type { Metadata } from "next";
+import StructuredData from "@/components/StructuredData";
 
 export const metadata: Metadata = {
   title: "MSP Services — Managed IT, Cloud, Automation & AI | 143IT",
@@ -99,8 +100,42 @@ export default function ServicesPage() {
     },
   ];
 
+  const faqs = [
+    {
+      question: "What services does 143IT provide?",
+      answer: "143IT provides managed infrastructure, cloud modernization, automation and DevOps, security and compliance support, and AI integration services for business IT teams.",
+    },
+    {
+      question: "Where does 143IT provide managed IT and automation services?",
+      answer: "143IT serves Dallas, Fort Worth, the DFW area, Texas, the United States, and Canada through a remote-first managed-services model.",
+    },
+    {
+      question: "How does 143IT start a new services engagement?",
+      answer: "143IT starts by assessing the current environment, stabilizing operations, automating repeatable workflows, and then evolving the platform with cloud, security, and AI improvements.",
+    },
+  ];
+
   return (
     <div className="pt-24">
+      <StructuredData
+        type="BreadcrumbList"
+        data={{
+          itemListElement: [
+            { "@type": "ListItem", position: 1, name: "Home", item: "https://143it.com/" },
+            { "@type": "ListItem", position: 2, name: "Services", item: "https://143it.com/services" },
+          ],
+        }}
+      />
+      <StructuredData
+        type="FAQPage"
+        data={{
+          mainEntity: faqs.map((faq) => ({
+            "@type": "Question",
+            name: faq.question,
+            acceptedAnswer: { "@type": "Answer", text: faq.answer },
+          })),
+        }}
+      />
       {/* Hero Section */}
       <section className="py-20 px-6 bg-gradient-to-b from-accent-1/5 to-transparent">
         <div className="container mx-auto max-w-4xl text-center">
@@ -178,6 +213,28 @@ export default function ServicesPage() {
                   {item.title}
                 </h3>
                 <p className="text-text/70 text-sm">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Services FAQ */}
+      <section className="py-20 px-6 bg-gradient-to-b from-transparent to-accent-1/5">
+        <div className="container mx-auto max-w-4xl">
+          <div className="text-center mb-12">
+            <h2 className="text-4xl md:text-5xl font-heading font-bold mb-4">
+              Service <span className="gradient-text">Questions</span>
+            </h2>
+            <p className="text-lg text-text/80">
+              Clear answers about how 143IT delivers managed IT, cloud, automation, security, and AI services.
+            </p>
+          </div>
+          <div className="space-y-6">
+            {faqs.map((faq) => (
+              <div key={faq.question} className="bg-background/50 border border-accent-1/20 rounded-xl p-6">
+                <h3 className="text-xl font-heading font-bold mb-3">{faq.question}</h3>
+                <p className="text-text/75">{faq.answer}</p>
               </div>
             ))}
           </div>
