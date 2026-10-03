@@ -32,6 +32,12 @@ export default function ResourcesPage() {
           type: "internal",
         },
         {
+          title: "AI Search Measurement Guide",
+          description: "Track AI referrals, answer visibility, and scanner score deltas",
+          href: "/resources/ai-search-measurement",
+          type: "internal",
+        },
+        {
           title: "Self-Healing Infrastructure",
           description: "Learn to build automated remediation workflows",
           href: "/blog/self-healing-infrastructure",
